@@ -4,11 +4,13 @@
 }
 
 /*-------------- header start --------------*/
-.header {
+.header,
+.footer {
   background-color: #192F2D;
 }
 
-.header__container {
+.header__container,
+.footer-container {
   width: 100%;
   max-width: calc(1752px - 20px);
   height: 100px;
@@ -55,6 +57,7 @@
   background-image: url("assets/svg/tree.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  transition: .3s;
 }
 
 .header__link--logo:hover {
@@ -71,6 +74,7 @@
   background-attachment: fixed;
 }
 
+/*-------------- start page start --------------*/
 .start-page {
   position: relative;
   display: flex;
@@ -125,7 +129,6 @@
   display: block;
   width: 419px;
   padding: 65px 85px;
-  margin-top: 287px;
   margin-bottom: 113px;
   border: 2px solid #278D9F;
   border-radius: 30px;
@@ -163,3 +166,38 @@
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
 }
+/*-------------- start page end --------------*/
+
+/*-------------- footer start --------------*/
+.footer__author {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.footer__link:hover {
+  color: #278D9F
+}
+
+.footer__rsschool-logo {
+  width: 160px;
+  height: 60px;
+  background-image: url("./assets/svg/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .3s;
+}
+
+.footer__rsschool-logo:hover {
+  filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(
+    141deg) brightness(89%) contrast(90%);
+}
+/*-------------- footer end --------------*/
