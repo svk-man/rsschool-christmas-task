@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.page.hidden {
+  display: none;
+}
+
 /*-------------- header start --------------*/
 .header,
 .footer {
@@ -167,6 +171,136 @@
   outline-offset: 15px;
 }
 /*-------------- start page end --------------*/
+
+/*-------------- toys page start --------------*/
+.toys-page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  column-gap: 20px;
+}
+
+.toys-page__sidebar {
+  width: 446px;
+}
+
+.toys-page__panel {
+  display: flex;
+  align-items: center;
+  column-gap: 43px;
+  margin-bottom: 54px;
+}
+
+.toys-page__panel__control {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.toys-page__panel__control--active {
+  filter: invert(15%) sepia(38%) saturate(418%) hue-rotate(125deg) brightness(95%) contrast(97%);
+}
+
+.toys-page__panel__control:hover {
+  filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(
+    141deg) brightness(89%) contrast(90%);
+}
+
+.toys-page__panel__sound-control {
+  width: 36px;
+  height: 36px;
+  background-image: url("./assets/svg/audio.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.toys-page__panel__sound-control--mute {
+  background-image: url("./assets/svg/mute.svg");
+}
+
+.toys-page__panel__snow-control {
+  width: 36px;
+  height: 36px;
+  background-image: url("./assets/svg/snow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.toys-page__panel__search {
+  width: 254px;
+}
+
+.toys-page__filters__item {
+  margin-bottom: 42px;
+}
+
+.toys-page__filters__item:last-child {
+  margin-bottom: 0;
+}
+
+.toys-page__filters__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.toys-page__cards__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-family: "Neucha", cursive;
+  font-size: 42px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.toys-page__cards__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 36px;
+}
+
+.toys-page__cards__item {
+  display: flex;
+  flex-direction: column;
+  width: 188px;
+  height: 300px;
+  padding: 18px 16px;
+  border: 1px solid #1A5966;
+  border-radius: 10px;
+  background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.5) 0%, rgba(179, 246, 255, 0.5) 100%);
+  backdrop-filter: blur(4px);
+}
+
+.toys-page__cards__item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Neucha", cursive;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.toys-page__cards__item-image {
+  align-self: center;
+  width: 85px;
+  margin-bottom: 10px;
+}
+
+.toys-page__cards__item-property {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  line-height: 12px;
+  color: #fff;
+}
+
+.toys-page__cards__item-property:last-child {
+  margin-bottom: 0;
+}
+/*-------------- toys page end --------------*/
 
 /*-------------- footer start --------------*/
 .footer__author {
