@@ -1,4 +1,5 @@
 import './style.css';
+import jsonData from './assets/toys/data';
 
 interface Toy {
   name: string,
@@ -25,26 +26,11 @@ function createCardItemElement(toysItem: Toy) {
   return cardsItem;
 }
 
-const fetchToys = async (): Promise<Toy[] | undefined > => {
-  const api = './assets/data.json';
-  try {
-    const response = await fetch(api);
-    const { data } = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    /*if (error: Err) {
-      return error.message;
-    }*/
-  }
-};
-
-const printToysJson = async () => {
+const printToysJson = () => {
   const cardsItems : HTMLElement | null = document.querySelector('.toys-page__cards__items');
   cardsItems!.innerHTML = '';
 
-  const toysData : Toy[] | undefined = await fetchToys();
-  for (const toysItem of toysData!) {
+  for (const toysItem of jsonData) {
     cardsItems!.append(createCardItemElement(toysItem));
   }
 };
